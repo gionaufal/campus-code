@@ -11,3 +11,5 @@ Variável com letra maiúscula == Constante
 ' ' -> string literal
 
 " " -> permite interpolação #{ }
+
+100_000 == 100000
