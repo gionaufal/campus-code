@@ -18,20 +18,21 @@ while option != 3
     puts 'Insira a expressão em português'
     port = gets.chomp
     puts
-    card = "#{eng} -> #{port}"
+    card = {pt: port, en: eng}
     cards << card
     puts card
-    puts 'Card inseridos'
+    puts 'Card inserido'
   elsif option == 3
     puts 'Seus cards: '
     cards.each do |card|
-      puts card
+      puts "#{card[:pt]} -> #{card[:en]}"
     end
+    puts
     puts 'Adeus'
     exit
   elsif option == 2
     cards.each do |card|
-      puts card
+      puts "#{card[:pt]} -> #{card[:en]}"
     end
   else
     puts 'Opção inválida'
