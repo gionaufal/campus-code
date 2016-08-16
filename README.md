@@ -1,5 +1,5 @@
 #Campus Code - Imersão Web
-### Repositório com anotações da imersão web do Campus code
+### Repositório com anotações e exercícios da Imersão Web do Campus Code
 
 Variável com letra maiúscula == Constante
 
@@ -15,3 +15,5 @@ Variável com letra maiúscula == Constante
 100_000 == 100000
 
 Tudo em Ruby é objeto: tem estados e responde a comandos
+
+Indentação em Ruby = 2 espaços!
