@@ -1,6 +1,8 @@
 puts 'Bem vindo ao Card Systems'
 
 # Essa é uma possível maneira de resolver o problema. Porém, ela é mais custosa para memória
+#
+#opção 1
 
 # def intro
 #   puts
@@ -32,8 +34,11 @@ puts 'Bem vindo ao Card Systems'
 # end
 #
 # intro
+#
+#opção 2
 
 option = 0
+cards = []
 
 while option != 2
   puts
@@ -49,8 +54,12 @@ while option != 2
     puts 'Insira a expressão em português'
     port = gets.chomp
     puts
+    card = [eng, port]
+    cards << card
     puts "#{eng} -> #{port}"
+    puts 'Card inseridos'
   elsif option == 2
+    puts 'Seus cards: ' + cards.to_s
     puts 'Adeus'
     exit
   else

@@ -13,3 +13,5 @@ Variável com letra maiúscula == Constante
 " " -> permite interpolação #{ }
 
 100_000 == 100000
+
+Tudo em Ruby é objeto: tem estados e responde a comandos
