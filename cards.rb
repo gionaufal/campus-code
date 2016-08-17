@@ -1,7 +1,6 @@
 require_relative 'card'
 
-def show_cards cards
-  puts 'Seus cards: '
+def print_cards cards
   cards.each do |card|
     puts "#{card}"
   end
@@ -23,11 +22,13 @@ end
 def find_card cards
   print 'Digite a expressão: '
   word = gets.chomp.downcase
-  cards.each do |card|
-    if card.pt.downcase == word || card.en.downcase == word
-      puts "#{card}"
-    end
+  
+  search = cards.select do |card|
+    card.en.downcase == word || card.pt.downcase == word
   end
+
+  print_cards search
+  
 end
 
 INSERT_CARD = 1
@@ -58,13 +59,15 @@ while option != EXIT_SYSTEM
   if option == INSERT_CARD
     get_cards cards
   elsif option == EXIT_SYSTEM
-    show_cards cards
+    puts 'Seus cards: '
+    print_cards cards
     puts
     puts 'Adeus'
   elsif option == SEARCH_CARDS
     find_card cards
   elsif option == SHOW_CARDS
-    show_cards cards
+    puts 'Seus cards: '
+    print_cards cards
   else
     puts 'Opção inválida'
     puts 'digite 1, 2 ou 3'
