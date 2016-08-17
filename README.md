@@ -17,3 +17,11 @@ Variável com letra maiúscula == Constante
 Tudo em Ruby é objeto: tem estados e responde a comandos
 
 Indentação em Ruby = 2 espaços!
+
+####Classes
+
+`attr_accessor` faz com que os métodos para leitura e definição dentro de uma classe sejam desnecessários
+
+`attr_reader` serve só para leitura
+
+`attr_writer` serve só para escrita
