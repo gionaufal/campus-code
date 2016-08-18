@@ -1,12 +1,14 @@
+FILE = 'cards.txt'
+
 require_relative 'card'
 
-def print_cards cards
-  cards.each do |card|
-    puts "#{card}"
+def print_cards
+  File.open(FILE).readlines.each do |card|
+    puts card
   end
 end
 
-def get_cards cards
+def get_cards
   puts 'Insira uma expressão em inglês'
   eng = gets.chomp
   puts
@@ -14,21 +16,24 @@ def get_cards cards
   port = gets.chomp
   puts
   card = Card.new(port, eng)
-  cards << card
+  File.open(FILE, 'a+') do |file|
+    file.puts card
+  end
   puts "Você inseriu o card: #{card}"
-  puts 'Card inserido'
 end
 
-def find_card cards
+def find_card
   print 'Digite a expressão: '
   word = gets.chomp.downcase
-  
-  search = cards.select do |card|
-    card.en.downcase == word || card.pt.downcase == word
+
+  search = File.open(FILE).readlines.select do |card|
+    card.include? word
   end
 
-  print_cards search
-  
+  puts "Cards encontrados: #{search.count}"
+  search.each do |card|
+    puts card
+  end
 end
 
 INSERT_CARD = 1
@@ -44,30 +49,29 @@ def menu
   puts "[#{SEARCH_CARDS}] Buscar card"
   puts "[#{EXIT_SYSTEM}] Sair"
   gets.to_i
-  
+
 end
 
 option = ''
-cards = []
 
 puts 'Bem vindo ao Card Systems'
 
 while option != EXIT_SYSTEM
   option = menu
   system("clear")
-  
+
   if option == INSERT_CARD
-    get_cards cards
+    get_cards
   elsif option == EXIT_SYSTEM
     puts 'Seus cards: '
-    print_cards cards
+    print_cards
     puts
-    puts 'Adeus'
+    puts 'Adeus!'
   elsif option == SEARCH_CARDS
-    find_card cards
+    find_card
   elsif option == SHOW_CARDS
     puts 'Seus cards: '
-    print_cards cards
+    print_cards
   else
     puts 'Opção inválida'
     puts 'digite 1, 2 ou 3'

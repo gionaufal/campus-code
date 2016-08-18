@@ -25,3 +25,11 @@ Indentação em Ruby = 2 espaços!
 `attr_reader` serve só para leitura
 
 `attr_writer` serve só para escrita
+
+#### Métodos
+* Se um método retorna bool, termina com '?'
+* Métodos com efeito colateral (ex: alterar a string que está o chamando) terminam com '!'
+
+-----
+
+Para criar arquivos, `File.new('nome', 'w+')`

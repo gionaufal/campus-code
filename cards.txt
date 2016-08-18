@@ -1,0 +1,2 @@
+oi -> hi
+olá -> hello
