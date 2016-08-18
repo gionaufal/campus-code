@@ -26,16 +26,18 @@ class Card
       card.include? word
     end
   end
-
+  
+  def self.to_card(line)
+    faces = line.chomp.split(' -> ')
+    puts Card.new(faces[0], faces[1])
+  end
+  
   def self.all
     File.open(FILE).readlines.map do |line|
       to_card(line)
     end
   end
 
-  def self.to_card(line)
-    faces = line.chomp.split(' -> ')
-    Card.new(faces[0], faces[1])
-  end
+
 
 end
