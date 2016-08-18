@@ -33,6 +33,9 @@ Para herdar métodos de uma outra classe:
 class Card < CardDefault
 end
 ```
+
+Em classes herdadas, se quiser chamar o método `.new` da classe pai, chama-se `super(attr)`
+ 
 #### Métodos
 * Se um método retorna bool, termina com '?'
 * Métodos com efeito colateral (ex: alterar a string que está o chamando) terminam com '!'
