@@ -26,6 +26,13 @@ Indentação em Ruby = 2 espaços!
 
 `attr_writer` serve só para escrita
 
+Para criar um método da própria classe, usar `self.`
+
+Para herdar métodos de uma outra classe:
+```
+class Card < CardDefault
+end
+```
 #### Métodos
 * Se um método retorna bool, termina com '?'
 * Métodos com efeito colateral (ex: alterar a string que está o chamando) terminam com '!'
