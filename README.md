@@ -39,4 +39,4 @@ end
 
 -----
 
-Para criar arquivos, `File.new('nome', 'w+')`
+Para criar arquivos, `File.new('nome', 'a+')`
