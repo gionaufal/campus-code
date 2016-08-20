@@ -35,7 +35,7 @@ end
 ```
 
 Em classes herdadas, se quiser chamar o método `.new` da classe pai, chama-se `super(attr)`
- 
+
 #### Métodos
 * Se um método retorna bool, termina com '?'
 * Métodos com efeito colateral (ex: alterar a string que está o chamando) terminam com '!'
@@ -43,3 +43,11 @@ Em classes herdadas, se quiser chamar o método `.new` da classe pai, chama-se `
 -----
 
 Para criar arquivos, `File.new('nome', 'w+')`
+
+-----
+
+### Intro Web
+
+Ruby gems são módulos/dependências0
+
+Instalar Rails sem documentação: `gem install rails --no-ri --no-rdoc`
