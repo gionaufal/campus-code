@@ -47,5 +47,6 @@ Em classes herdadas, se quiser chamar o método `.new` da classe pai, chama-se `
 Ruby gems são módulos/dependências0
 
 Instalar Rails sem documentação: `gem install rails --no-ri --no-rdoc`
-=======
+
+-----
 Para criar arquivos, `File.new('nome', 'a+')`
