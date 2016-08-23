@@ -17,10 +17,10 @@
 
 <section>
   <div class="cards">
-    <h2>Todos os cards:</h2>
+    <h2>Cards cadastrados: <%=@cards.count%></h2>
     <% @cards.each do |card|%>
       <p>
-        <a href="/cards/<%= card.id %>"><%=card.front%></a>
+        <a href="<%=card_path(card.id)%>"><%=card.front%></a>
       </p>
     <%end%>
   </div>
