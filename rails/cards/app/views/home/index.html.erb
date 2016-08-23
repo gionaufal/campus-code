@@ -1,1 +1,35 @@
-Saudações!
+<header>
+  <h1>Cards de tradução</h1>
+</header>
+
+<section>
+  <div class="about">
+    <p>Essa aplicação lista todos os cards cadastrados e suas devidas traduções</p>
+    <img src="https://cloud.google.com/images/products/artwork/DynamicTranslation.png" alt="translate">
+  </div>
+</section>
+
+<aside>
+  <div class="tools">
+    <h3>Outras ferramentas de tradução melhores do que essa:</h3>
+    <ul>
+      <li><a href="https://translate.google.com/">Google Translate</a></li>
+      <li><a href="https://www.bing.com/translator">Bing Translator</a></li>
+    </ul>
+  </div>
+</aside>
+
+<section>
+  <div class="cards">
+    <h2>Todos os cards:</h2>
+    <% @cards.each do |card|%>
+      <p>
+        <a href="/cards/<%= card.id %>"><%=card.front%></a>
+      </p>
+    <%end%>
+  </div>
+</section>
+
+<footer>
+  Desenvolvido no Campus Code em 2016
+</footer>

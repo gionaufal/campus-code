@@ -50,3 +50,9 @@ Instalar Rails sem documentação: `gem install rails --no-ri --no-rdoc`
 
 -----
 Para criar arquivos, `File.new('nome', 'a+')`
+
+
+Rails
+===
+Para criar um novo model:
+`rails g model card front:string back:string`
