@@ -1,0 +1,7 @@
+<h2>Todos os cards:</h2>
+<% @cards.each do |card| %>
+  <p>
+    <%=card.front%> = <%=card.back%>
+  </p>
+<%end%>
+<p><a href="/">Voltar</a></p>

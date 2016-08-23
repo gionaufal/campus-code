@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   get '/', to: 'home#index'
-  resources :cards, only: [:show]
+  #get '/cards/:id', to: 'cards#show'
+  resources :cards, only: [:show, :index]
 end
