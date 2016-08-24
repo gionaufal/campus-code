@@ -20,3 +20,9 @@ body{
   margin-left: 15%;
   font-weight: 300;
 }
+
+footer {
+   position:fixed;
+   bottom:0px;
+   height:30px;
+}

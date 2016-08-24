@@ -1,7 +1,6 @@
 <section>
   <div class="about">
     <p>Essa aplicação lista todos os cards cadastrados e suas devidas traduções</p>
-    <img src="https://cloud.google.com/images/products/artwork/DynamicTranslation.png" alt="translate">
   </div>
 </section>
 
@@ -9,8 +8,8 @@
   <div class="tools">
     <h3>Outras ferramentas de tradução melhores do que essa:</h3>
     <ul>
-      <li><a href="https://translate.google.com/">Google Translate</a></li>
-      <li><a href="https://www.bing.com/translator">Bing Translator</a></li>
+      <li><%= link_to "Google Translate", "https://translate.google.com/", target: "_blank"%></li>
+      <li><%= link_to "Bing Translator", "https://www.bing.com/translator", target: "_blank"%></li>
     </ul>
   </div>
 </aside>
@@ -20,12 +19,8 @@
     <h2>Cards cadastrados: <%=@cards.count%></h2>
     <% @cards.each do |card|%>
       <p>
-        <a href="<%=card_path(card.id)%>"><%=card.front%></a>
+        <%=link_to(card.front, card)%>
       </p>
     <%end%>
   </div>
 </section>
-
-<footer>
-  Desenvolvido no Campus Code em 2016
-</footer>
