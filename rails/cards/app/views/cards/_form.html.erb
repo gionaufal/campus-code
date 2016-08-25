@@ -1,11 +1,12 @@
+<p class='alert'><%= flash[:alert] %></p>
 <%= form_for(@card) do |f| %>
   <div>
-    <%= f.label :front, 'Português'%>
+    <%= f.label :front, 'Português', class: 'label'%>
     <%= f.text_field :front %>
   </div>
   <br>
   <div>
-    <%= f.label :back, 'Inglês' %>
+    <%= f.label :back, 'Inglês', class: 'label'%>
     <%= f.text_field :back %>
   </div>
   <br>

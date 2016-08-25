@@ -16,8 +16,12 @@ class CardsController < ApplicationController
 
   def create
     @card = Card.create(card_parameters)
-    @card.save
-    redirect_to @card
+    if @card.save
+      redirect_to @card
+    else
+      flash.now[:alert] = "Não se esqueça de preencher a versão em português!"
+      render :new
+    end
   end
 
   def edit
