@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## What is this?
+This is an app to register and show translation cards. It can be used by any establishment that needs to have specific words translated quickly. 
 
-Things you may want to cover:
+## Is it more useful than Google Translate, for example?
+Probably not. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## So, why did you make it?
+This was made as an exercise of Campus Code, a Rails Bootcamp based in São Paulo/BR, specifically to practice the basic concepts of Ruby on Rails, such as the MVC paradigm and CRUD requests.
