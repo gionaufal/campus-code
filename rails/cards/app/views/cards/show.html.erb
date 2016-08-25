@@ -6,4 +6,14 @@
   <p><%= @card.front %> = <%= @card.back %></p>
 </section>
 
+<p><%= link_to edit_card_path(@card) do %>
+  <button type="button" name="edit">Editar</button>
+<% end %>
+</p>
+<p>
+<%= link_to @card, method: :delete do %>
+  <button type="button" name="destroy" class='danger'>Deletar</button>
+<% end %>
+</p>
+
 <p><%=link_to('Voltar', root_path)%></p>

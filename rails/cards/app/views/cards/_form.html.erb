@@ -1,0 +1,13 @@
+<%= form_for(@card) do |f| %>
+  <div>
+    <%= f.label :front, 'Frente'%>
+    <%= f.text_field :front %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :back, 'Verso' %>
+    <%= f.text_field :back %>
+  </div>
+  <br>
+  <%= f.submit 'Enviar', id:'submit'%>
+<% end %>

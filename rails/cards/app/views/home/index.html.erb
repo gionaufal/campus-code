@@ -23,6 +23,8 @@
       </p>
     <%end%>
 
-    <%=link_to 'Criar card', '/cards/new'%>
+    <%=link_to new_card_path do%>
+      <button type="button" name="create">Criar card</button>
+    <% end %>
   </div>
 </section>
