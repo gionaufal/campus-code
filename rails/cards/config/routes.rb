@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   root to: 'home#index'
   #get '/', to: 'home#index', as: 'home'
   #get '/cards/:id', to: 'cards#show'
-  resources :cards
+  resources :cards do
+    resources :comments, only: [:create]
+  end
+
 
 end

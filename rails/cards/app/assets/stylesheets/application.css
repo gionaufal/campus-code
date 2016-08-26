@@ -26,7 +26,7 @@ footer {
   height:30px;
 }
 
-button, #submit {
+button, .submit {
   height: 30px;
   width: 100px;
   border-radius: 5px;
@@ -44,7 +44,7 @@ button, #submit {
 }
 
 .label {
-  width: 80px;
+  width: 100px;
   display: inline-block;
 }
 

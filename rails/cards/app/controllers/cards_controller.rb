@@ -3,7 +3,7 @@ class CardsController < ApplicationController
   before_action :set_card, only: [:show, :edit, :update, :destroy]
 
   def show
-
+    @comment = Comment.new
   end
 
   def index
@@ -41,7 +41,7 @@ class CardsController < ApplicationController
   private
 
   def card_parameters
-    params.require(:card).permit(:front, :back)
+    params.require(:card).permit(:front, :back, :author)
   end
 
   def set_card

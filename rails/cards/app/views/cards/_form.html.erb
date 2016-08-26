@@ -10,5 +10,10 @@
     <%= f.text_field :back %>
   </div>
   <br>
-  <%= f.submit 'Enviar', id:'submit'%>
+  <div>
+    <%= f.label :author, 'Autor', class: 'label'%>
+    <%= f.text_field :author %>
+  </div>
+  <br>
+  <%= f.submit 'Enviar', class:'submit'%>
 <% end %>

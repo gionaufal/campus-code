@@ -4,6 +4,7 @@
 
 <section>
   <p><%= @card.friendly_description %></p>
+  <p>Enviado por <%= @card.author %></p>
 </section>
 
 <p><%= link_to edit_card_path(@card) do %>
@@ -17,3 +18,27 @@
 </p>
 
 <p><%=link_to('Voltar', root_path)%></p>
+
+<h2>Comentários:</h2>
+<% @card.comments.each do |comment| %>
+<div>
+  <p><%= comment.author %> comentou: <%= comment.body %></p>
+</div>
+<% end %>
+
+<h3>Novo comentário</h3>
+<%= form_for [@card, @comment] do |f|%>
+  <div>
+    <%= f.label :author, 'Autor', class:'label'%>
+    <%= f.text_field :author %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :body, 'Comentário', class:'label' %>
+    <%= f.text_area :body %>
+  </div>
+  <br>
+  <div>
+    <%= f.submit 'Comentar', class: 'submit' %>
+  </div>
+<% end %>
