@@ -1,7 +1,13 @@
+<div>
+  <%= form_tag(cards_path, method: 'get') do %>
+    <%= text_field_tag :search, params[:search], placeholder: 'Procurar card:' %>
+    <%= submit_tag 'Procurar',class:'submit'%>
+  <% end %>
+</div>
 <h2>Todos os cards:</h2>
 <% @cards.each do |card| %>
   <p>
-    <%=card.front%> = <%=card.back%>
+    <%= card.friendly_description %>
   </p>
 <%end%>
 <p><a href="/">Voltar</a></p>

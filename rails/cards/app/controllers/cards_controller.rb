@@ -8,6 +8,11 @@ class CardsController < ApplicationController
 
   def index
     @cards = Card.all
+    if params[:search]
+      @cards = Card.where("front LIKE ? or back LIKE ?", "#{params[:search]}", "#{params[:search]}")
+    else
+      @cards = Card.all
+    end
   end
 
   def new
