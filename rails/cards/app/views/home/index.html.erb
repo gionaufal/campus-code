@@ -16,7 +16,9 @@
 
 <section>
   <div class="cards">
-    <h2>Cards cadastrados: <%=@cards.count%></h2>
+    <%= link_to cards_path do%>
+      <h2>Cards cadastrados: <%=@cards.count%></h2>
+    <% end %>
     <% @cards.each do |card|%>
       <p>
         <%=link_to(card.front, card)%>

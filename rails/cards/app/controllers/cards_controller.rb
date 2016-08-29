@@ -7,7 +7,6 @@ class CardsController < ApplicationController
   end
 
   def index
-    @cards = Card.all
     if params[:search]
       @cards = Card.where("front LIKE ? or back LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%")
     else
@@ -46,7 +45,7 @@ class CardsController < ApplicationController
   private
 
   def card_parameters
-    params.require(:card).permit(:front, :back, :author)
+    params.require(:card).permit(:front, :back, :author, :published)
   end
 
   def set_card

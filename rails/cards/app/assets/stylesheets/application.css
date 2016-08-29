@@ -56,3 +56,20 @@ button, .submit {
 .field_with_errors{
   display: inline-block;
 }
+
+.field {
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding-left: 5px;
+}
+
+.published{
+  margin-top: 20px;
+}
+
+.field_body{
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding-left: 5px;
+}
