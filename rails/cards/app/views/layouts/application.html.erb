@@ -8,14 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <header>
-      <%=link_to root_path do%>
+    <div class="wrapper">      
+      <header>
+        <%=link_to root_path do%>
         <h1>Cards de  tradução</h1>
         <%= image_tag('translate.png', width: '200px')%>
-      <% end %>
-    </header>
+        <% end %>
+      </header>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
 
     <footer>
       Desenvolvido no Campus Code em 2016

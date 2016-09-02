@@ -56,3 +56,16 @@ Rails
 ===
 Para criar um novo model:
 `rails g model card front:string back:string`
+
+Rails new padrão:
+`rails new app_path --B --T` (skip bundle & skip test)
+
+Gems para instalar depois:
+* rspec
+* capybara
+* simplecov
+* pry-byebug
+
+setup:
+* `rails generate rspec:install` + `bundle exec rspec`
+* `bundle check`

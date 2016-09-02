@@ -4,7 +4,7 @@
     <%= submit_tag 'Procurar',class:'submit'%>
   <% end %>
 </div>
-<h2>Todos os cards:</h2>
+<h2>Cards cadastrados: <%= @cards.count %></h2>
 <% @cards.each do |card| %>
   <p>
     <%= link_to card do %>
